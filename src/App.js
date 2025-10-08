@@ -6,6 +6,7 @@ import TribesSection from "./components/Tribes/Tribes";
 import ContactUs from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import SkyScroll from "./components/SkyScroll/SkyScroll";
+import MusicButton from "./components/MusicButton/MusicButton";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <Intro />
       <SkyScroll />
       <Footer />
+      <MusicButton />
     </div>
   );
 }
