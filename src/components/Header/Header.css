@@ -3,7 +3,7 @@
   --text: #333;
   --accent: #8eac89;
   --accent-dark: #6f8a6c;
-    --bg1: #ffffff00;
+    --bg1: #ffffff;
   --link-hover: var(--accent);
 }
 .header {
@@ -31,6 +31,7 @@
 }
 
 h1 {
+  font-family: "Press Start 2P", cursive;
   font-size: 18px;
   margin: 0;
 }
