@@ -15,7 +15,7 @@ export default function Footer() {
         <a href="#" className="hover:text-pink-400"><FaInstagram /></a>
         <a href="#" className="hover:text-orange-400"><FaPatreon /></a>
       </div>
-      <p className="text-center text-sm mt-6">© Catastrophy Studios</p>
+      <p className="text-center text-sm mt-6">©Catastrophe Studios</p>
     </footer>
   );
 }
