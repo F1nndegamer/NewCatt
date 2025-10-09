@@ -1,9 +1,15 @@
 import { useEffect, useRef } from "react";
 import "./SkyScroll.css";
 import Profile from "../../assets/icons/Profile/profile.png";
+import cloud from "../../assets/images/Background/cloud.png";
+import mountain from "../../assets/images/Background/Mountain.png"; 
+import ground from "../../assets/images/Background/Grass.png";
 
 export default function SkyScroll() {
   const skyRef = useRef(null);
+  const cloudRef = useRef(null);
+  const mountainRef = useRef(null);
+  const groundRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,16 +26,31 @@ export default function SkyScroll() {
       if (skyRef.current) {
         skyRef.current.style.background = `rgb(${r}, ${g}, ${b})`;
       }
+
+      if (cloudRef.current)
+        cloudRef.current.style.transform = `translateY(${scrollTop * 0.4}px)`;
+      if (mountainRef.current)
+        mountainRef.current.style.transform = `translateY(${scrollTop * 0.2}px)`;
+      if (groundRef.current)
+        groundRef.current.style.transform = `translateY(${scrollTop * 0.1}px)`;
     };
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div ref={skyRef} className="sky-scroll">
+      <div className="sky-layer cloud" ref={cloudRef}>
+        <img src={cloud} alt="cloud" />
+      </div>
+      <div className="sky-layer mountain" ref={mountainRef}>
+        <img src={mountain} alt="mountain" />
+      </div>
+      <div className="sky-layer ground" ref={groundRef}>
+        <img src={ground} alt="ground" />
+      </div>
       <div className="sky-scroll-content">
         <img src={Profile} alt="Profile" className="profile-img" />
       </div>
