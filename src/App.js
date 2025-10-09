@@ -12,8 +12,8 @@ export default function App() {
   return (
     <div className="font-sans">
       <Header />
-      <Intro />
       <SkyScroll />
+      <AboutUs />
       <Footer />
       <MusicButton />
     </div>
