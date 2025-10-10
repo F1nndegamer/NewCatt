@@ -1,58 +1,63 @@
-.about {
-  background-color: #1e293b;
-  color: #e2e8f0;
-  padding: 80px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  border-radius: 12px;
-}
-.about-title {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-.about-section {
-  margin-bottom: 40px;
-}
-.about-subtitle {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-.about-text {
-  color: #cbd5e1;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-.about-list {
-  list-style: disc inside;
-  padding-left: 0;
-}
-.about-list li {
-  background: rgba(51, 65, 85, 0.6);
-  padding: 12px 16px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-}
-.team-grid {
+.profiles-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr); /* two cards per row */
+  gap: 2px;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 0 20px;
+  font-family: "Inter", sans-serif;
 }
-.team-member {
-  text-align: center;
+
+.profile-card {
+  display: flex;
+  align-items: center; /* image left, info right */
+  background: #ffffff10;
+  border: 1px solid #ffffff30;
+  border-radius: 12px;
+  padding: 16px;
+  backdrop-filter: blur(6px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.avatar {
-  width: 96px;
-  height: 96px;
-  display: block;
-  margin: 0 auto 8px auto;
-  border-radius: 50%;
+
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.profile-pic {
+  width: 350px;
+  height: 350px;
   object-fit: cover;
+  border-radius: 10px;
+  margin-right: 16px; /* spacing between image and info */
+  border: 2px solid #000;
 }
-.member-name {
-  font-weight: 500;
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
 }
-.member-role {
-  font-size: 0.9rem;
-  color: #94a3b8;
+
+.profile-name {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000;
+  padding-bottom: 4px;
+  position: relative;
+}
+
+.profile-name::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #000; /* line between name and job */
+  margin-top: 4px;
+}
+
+.profile-job {
+  margin-top: 8px;
+  color: #000;
+  font-size: 1rem;
 }

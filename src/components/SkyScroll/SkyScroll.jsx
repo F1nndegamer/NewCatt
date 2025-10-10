@@ -28,7 +28,7 @@ export default function SkyScroll() {
       }
 
       if (cloudRef.current)
-        cloudRef.current.style.transform = `translateY(${scrollTop * 0.4}px)`;
+        cloudRef.current.style.transform = `translateY(${scrollTop * 0}px)`;
       if (mountainRef.current)
         mountainRef.current.style.transform = `translateY(${scrollTop * 0.2}px)`;
       if (groundRef.current)
@@ -52,7 +52,6 @@ export default function SkyScroll() {
         <img src={ground} alt="ground" />
       </div>
       <div className="sky-scroll-content">
-        <img src={Profile} alt="Profile" className="profile-img" />
       </div>
     </div>
   );
