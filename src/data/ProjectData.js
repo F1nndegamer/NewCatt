@@ -8,38 +8,46 @@ import ProfilePic7 from '../assets/images/Profile/profile7.png';
 
 export const profiles = [
   {
-    name: "Dillon joly",
+    name: "Dillon",
     job: "Artist",
-    image: ProfilePic1
+    image: ProfilePic1,
+    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis n"
   },
   {
-    name: "Arda Ozkan",
-    job: "programmer",
-    image: ProfilePic2
-  },
-  {
-    name: "Ava murray",
+    name: "Ava",
     job: "Artist",
-    image: ProfilePic3
+    image: ProfilePic3,
+    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis n"
   },
   {
-    name: "'orange'",
+    name: "F1nn",
     job: "programmer",
-    image: ProfilePic4
+    image: ProfilePic6,
+    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis n"
   },
   {
-    name: "joel ravie",
+    name: "Arda",
+    job: "programmer",
+    image: ProfilePic2,
+    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis n"
+  },
+  {
+    name: "'Orange'",
+    job: "programmer",
+    image: ProfilePic4,
+    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis n"
+  },
+  
+  {
+    name: "Alex",
+    job: "programmer",
+    image: ProfilePic7,
+    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis n"
+  },
+  {
+    name: "Joel",
     job: "musician",
-    image: ProfilePic5
-  },
-  {
-    name: "F1nndegamer",
-    job: "programmer + webdesigner",
-    image: ProfilePic6
-  },
-  {
-    name: "Alex Hannukka",
-    job: "programmer",
-    image: ProfilePic7
+    image: ProfilePic5,
+    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis n"
   }
 ];

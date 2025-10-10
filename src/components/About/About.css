@@ -1,49 +1,82 @@
 .profiles-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* two cards per row */
-  gap: 2px;
-  max-width: 600px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 2000px;
   margin: 50px auto;
-  padding: 0 20px;
+  padding: 40px;
   font-family: "Inter", sans-serif;
+  background-color: #424242;
+  border-radius: 16px;
+  .profile-card:last-child {
+    grid-column: 1 / span 2;
+    justify-self: center;
+    max-width: 600px;
+  }
+}
+
+.team-header {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.team-header h2 {
+  font-size: 2rem;
 }
 
 .profile-card {
   display: flex;
-  align-items: center; /* image left, info right */
-  background: #ffffff10;
-  border: 1px solid #ffffff30;
+  align-items: center;
+  background: #1a1a1a;
+  border: 1px solid #333;
   border-radius: 12px;
-  padding: 16px;
+  padding: 20px;
   backdrop-filter: blur(6px);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.about-text {
+  color: #ddd;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+}
+
 .profile-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
 
 .profile-pic {
-  width: 350px;
-  height: 350px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 10px;
-  margin-right: 16px; /* spacing between image and info */
-  border: 2px solid #000;
+  margin-right: 24px;
+  border: 2px solid #fff;
 }
 
 .profile-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-text {
   display: flex;
   flex-direction: column;
 }
 
 .profile-name {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  color: #000;
-  padding-bottom: 4px;
+  color: #fff;
+  padding-bottom: 6px;
   position: relative;
 }
 
@@ -52,12 +85,19 @@
   display: block;
   width: 100%;
   height: 1px;
-  background-color: #000; /* line between name and job */
+  background-color: #fff;
   margin-top: 4px;
 }
 
 .profile-job {
-  margin-top: 8px;
-  color: #000;
-  font-size: 1rem;
+  margin-top: 4px;
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+.profile-description {
+  color: #aaa;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  max-width: 300px;
 }
