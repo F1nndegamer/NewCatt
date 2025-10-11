@@ -14,6 +14,7 @@ export default function App() {
       <Header />
       <SkyScroll />
       <AboutUs />
+      <TribesSection />
       <Footer />
       <MusicButton />
     </div>
