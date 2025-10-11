@@ -2,7 +2,7 @@ import ProfilePic1 from '../assets/images/Profile/profile1.jpg';
 import ProfilePic2 from '../assets/images/Profile/profile2.jpg';
 import ProfilePic3 from '../assets/images/Profile/profile3.jpg';
 import ProfilePic4 from '../assets/images/Profile/profile4.jpg';
-import ProfilePic5 from '../assets/images/Profile/profile5.jpg';
+import ProfilePic5 from '../assets/images/Profile/profile5.png';
 import ProfilePic6 from '../assets/images/Profile/profile6.png';
 import ProfilePic7 from '../assets/images/Profile/profile7.png';
 
