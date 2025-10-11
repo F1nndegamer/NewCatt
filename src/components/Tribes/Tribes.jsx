@@ -1,41 +1,77 @@
-import React from "react";
-import './Tribes.css';
-export default function TribesSection() {
+// src/components/TribesPage.jsx
+import React, { useEffect, useState } from "react";
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import "./Tribes.css";
+
+export default function Tribes() {
+  const [images, setImages] = useState([]);
+
+  // Automatically import images from folder
+  useEffect(() => {
+    const importAll = (r) => r.keys().map(r);
+    const imgs = importAll(
+      require.context("../../assets/images/Screenshots", false, /\.(png|jpe?g|svg)$/)
+    );
+    setImages(imgs);
+  }, []);
+
   return (
-    <section id="tribes" className="tribes">
-      <h2 className="text-3xl font-bold mb-6">Tribes</h2>
+    <div className="tribes">
+      {/* Title */}
+      <h1 className="tribes-title">TRIBES</h1>
 
-      <div className="mb-10">
-        <h3 className="text-2xl font-semibold mb-2">Demo</h3>
-        <p className="text-gray-400">...</p>
-      </div>
-
-      <div className="mb-10">
-        <h3 className="text-2xl font-semibold mb-2">History of Tribes</h3>
-        <p className="text-gray-400">...</p>
-      </div>
-
-      <div className="mb-10">
-        <h3 className="text-2xl font-semibold mb-2">Future / Goals</h3>
-        <p className="text-gray-400">...</p>
-      </div>
-
-      <div className="mb-10">
-        <h3 className="text-2xl font-semibold mb-2">Steam Mention</h3>
-        <a href="#" className="text-blue-400 hover:underline">...</a>
-      </div>
-
-      <div className="mb-10">
-        <h3 className="text-2xl font-semibold mb-2">Trailer</h3>
-        <div className="aspect-video bg-gray-700 rounded-lg">...</div>
-      </div>
-
-      <div>
-        <h3 className="text-2xl font-semibold mb-2">Screenshots</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          <div className="w-full h-40 bg-gray-700 rounded-lg">...</div>
+      {/* Slideshow */}
+      <div className="slideshow-container">
+        <div className="slideshow">
+          {images.concat(images).map((src, index) => (
+            <img key={index} src={src} alt={`tribe-${index}`} />
+          ))}
         </div>
       </div>
-    </section>
+
+      {/* History and Future Goals */}
+      <section className="tribes-info">
+        <div className="history">
+          <h2>History of Tribes</h2>
+          <p>
+            Tribes have existed for centuries, forming communities based on
+            culture, shared resources, and traditions. They shaped human
+            civilization in countless ways.
+          </p>
+        </div>
+        <div className="future-goals">
+          <h2>Future Goals</h2>
+          <p>
+            Our goal is to preserve tribal knowledge, foster unity among
+            communities, and ensure sustainable growth for future generations.
+          </p>
+        </div>
+      </section>
+
+      {/* Wishlist button */}
+      <div className="wishlist">
+        <button>Wishlist Now</button>
+      </div>
+
+      {/* Embedded video */}
+      <div className="video-container">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Tribes Video"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+
+      {/* Social Icons */}
+      <div className="social-icons">
+        <FaFacebook size={30} />
+        <FaTwitter size={30} />
+        <FaInstagram size={30} />
+      </div>
+    </div>
   );
 }
