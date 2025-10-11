@@ -1,26 +1,24 @@
-// src/components/TribesPage.jsx
 import React, { useEffect, useState } from "react";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import "./Tribes.css";
 
 export default function Tribes() {
   const [images, setImages] = useState([]);
-
-  // Automatically import images from folder
   useEffect(() => {
     const importAll = (r) => r.keys().map(r);
     const imgs = importAll(
-      require.context("../../assets/images/Screenshots", false, /\.(png|jpe?g|svg)$/)
+      require.context(
+        "../../assets/images/Screenshots",
+        false,
+        /\.(png|jpe?g|svg)$/
+      )
     );
     setImages(imgs);
   }, []);
 
   return (
     <div className="tribes">
-      {/* Title */}
       <h1 className="tribes-title">TRIBES</h1>
-
-      {/* Slideshow */}
       <div className="slideshow-container">
         <div className="slideshow">
           {images.concat(images).map((src, index) => (
@@ -29,7 +27,6 @@ export default function Tribes() {
         </div>
       </div>
 
-      {/* History and Future Goals */}
       <section className="tribes-info">
         <div className="history">
           <h2>History of Tribes</h2>
@@ -48,25 +45,28 @@ export default function Tribes() {
         </div>
       </section>
 
-      {/* Wishlist button */}
       <div className="wishlist">
-        <button>Wishlist Now</button>
+        <a
+          href="https://store.steampowered.com/app/3551950/Tribes/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="wishlist-button"
+        >
+          Wishlist Now
+        </a>
       </div>
 
-      {/* Embedded video */}
       <div className="video-container">
         <iframe
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          src="https://www.youtube.com/embed/8taukL_xkaI"
           title="Tribes Video"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
       </div>
-
-      {/* Social Icons */}
       <div className="social-icons">
         <FaFacebook size={30} />
         <FaTwitter size={30} />
