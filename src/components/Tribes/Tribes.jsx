@@ -17,7 +17,7 @@ export default function Tribes() {
   }, []);
 
   return (
-    <div className="tribes">
+    <div className="tribes-page">
       <h1 className="tribes-title">TRIBES</h1>
       <div className="slideshow-container">
         <div className="slideshow">
