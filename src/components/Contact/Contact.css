@@ -18,35 +18,38 @@
   justify-content: center;
   align-items: stretch;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  transition: all 0.4s ease;
 }
 
 .contact-card {
-  flex: 1;
-  min-width: 180px;
+  flex: 0.3; /* default: very small width */
+  min-width: 80px;
   height: 380px;
   overflow: hidden;
-  background: #fff;
+  background: #b3b3b3;
   border-radius: 20px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   padding: 30px 20px;
   cursor: pointer;
-  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: flex 0.5s ease, background 0.3s ease, transform 0.3s ease;
 }
 
 .contact-card:hover {
-  transform: scale(1);
+  transform: translateY(-3px);
 }
 
 .contact-card.active {
-  background: linear-gradient(145deg, #f5f7ff, #eaefff);
-  transform: scale(1.15);
+  flex: 1.8;
+  background: #6e6e6e;
+  color: rgb(255, 0, 0);
   z-index: 2;
+  transform: scale(1.02);
 }
 
 .contact-icon {
@@ -56,17 +59,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #000000, #000000);
-  color: #fff;
+  background:#000000;
+  color: #ffffff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   margin-bottom: 20px;
   will-change: transform;
+  flex-shrink: 0;
 }
 
 .contact-info {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  text-align: center;
+}
+
+.contact-card.active .contact-info {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .contact-info h3 {
@@ -77,14 +87,14 @@
 
 .contact-info p {
   font-size: 0.9rem;
-  color: #555;
+  color: #ffffff;
   margin-bottom: 15px;
 }
 
 .contact-button {
   display: inline-block;
   background: #000000;
-  color: white;
+  color: rgb(180, 180, 180);
   text-decoration: none;
   padding: 10px 18px;
   border-radius: 12px;
@@ -94,7 +104,6 @@
 
 .contact-button:hover {
   background: #4a4ce8;
-  text-decoration: none;
   transform: translateY(-2px);
 }
 
@@ -121,12 +130,17 @@
 }
 
 @media (max-width: 768px) {
-  .contact-card.active {
-    flex: 1 1 100%;
-  }
-
   .contact-cards {
     flex-direction: column;
     align-items: center;
+  }
+
+  .contact-card {
+    flex: 1;
+    width: 100%;
+  }
+
+  .contact-card.active {
+    transform: scale(1);
   }
 }
