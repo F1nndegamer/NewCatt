@@ -1,9 +1,9 @@
 :root {
-  --bg: #0b0c0f;
-  --text: #333;
+  --bg: #0b0c0f00;
+  --text: #333333;
   --accent: #8eac89;
   --accent-dark: #6f8a6c;
-    --bg1: #ffffff;
+    --bg1: #ffffff54;
   --link-hover: var(--accent);
 }
 .header {
