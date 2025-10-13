@@ -13,20 +13,20 @@ export default function Footer() {
   return (
     <footer className="footer px-8 py-12">
       <p className="text-center italic mb-6">"Quote here"</p>
-      <div className="flex justify-center space-x-6 text-xl">
-        <a href="https://www.youtube.com/@CatastropheStudiosAC" target="_blank">
+      <div className="socials">
+        <a href="...">
           <FaYoutube />
         </a>
-        <a href="https://www.discord.gg/twbPKAHRNy" target="_blank">
+        <a href="...">
           <FaDiscord />
         </a>
-        <a href="https://www.tiktok.com/@tribesgame" target="_blank">
+        <a href="...">
           <FaTiktok />
         </a>
-        <a href="https://www.instagram.com/tribesgame/" target="_blank">
+        <a href="...">
           <FaInstagram />
         </a>
-        <a href="https://www.patreon.com/CatastropheStudiosDEV" target="_blank">
+        <a href="...">
           <FaPatreon />
         </a>
       </div>
