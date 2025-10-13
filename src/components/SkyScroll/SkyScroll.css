@@ -2,78 +2,33 @@
   width: 100%;
   height: 100vh;
   background: rgb(20, 30, 60);
-  transition: background 0.3s linear;
   position: relative;
   overflow: hidden;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-family: sans-serif;
-  text-align: center;
+  transition: background 0.3s linear;
 }
 
-.sky-layer {
+.layer {
   position: absolute;
   width: 100%;
   left: 0;
 }
 
-.sky-layer img {
+.layer img {
   width: 100%;
   display: block;
 }
-.sky-scroll-content {
-  position: relative;
+
+.cloud {
+  top: -110%;
   z-index: 3;
 }
 
-.sky-scroll::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(
-    circle at 50% 20%,
-    rgba(255, 0, 212, 0.1),
-    transparent 70%
-  );
-  transition: opacity 0.3s linear;
-  opacity: 0.6;
-}
-
-.sky-scroll-content {
-  position: relative;
-  z-index: 1;
-}
-
-.profile-img {
-
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-  object-fit: cover;
-}
-.cloud {
-  top: 5%;
-  z-index: 2;
-}
-
 .mountain {
-  bottom: 10%;
-  z-index: 1;
-}
-
-.ground {
-  bottom: 0%;
+  bottom: -165%;
   z-index: 0;
 }
 
-.sky-layer img {
-  width: 100%;
-  height: auto;
-  display: block;
+.ground {
+  bottom: -150%;
+  z-index: 1;
 }
-

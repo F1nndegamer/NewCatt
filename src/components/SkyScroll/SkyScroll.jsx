@@ -1,65 +1,78 @@
 import { useEffect, useRef } from "react";
 import "./SkyScroll.css";
-import Profile from "../../assets/images/Profile/logo.png";
-import cloud from "../../assets/images/Background/cloud.png";
-import mountain from "../../assets/images/Background/Mountain.png";
-import ground from "../../assets/images/Background/Grass.png";
+import cloudImg from "../../assets/images/Background/cloud.png";
+import mountainImg from "../../assets/images/Background/Mountain.png";
+import groundImg from "../../assets/images/Background/Grass.png";
 
 export default function SkyScroll() {
   const skyRef = useRef(null);
-  const cloudRef = useRef(null);
-  const mountainRef = useRef(null);
-  const groundRef = useRef(null);
+  const layers = useRef({
+    cloud: null,
+    mountain: null,
+    ground: null,
+  });
 
   useEffect(() => {
-    const handleScroll = () => {
-      const ScrollHeight = 300;
+    let ticking = false;
+
+    const updateParallax = () => {
       const scrollTop = window.scrollY;
-      const scrolled = Math.min(scrollTop / ScrollHeight, 1);
+      const maxScroll = 300;
+      const progress = Math.min(scrollTop / maxScroll, 1);
 
-      const nightColor = [20, 30, 60];
-      const dayColor = [135, 206, 235];
-      const r = Math.round(
-        nightColor[0] + (dayColor[0] - nightColor[0]) * scrolled
-      );
-      const g = Math.round(
-        nightColor[1] + (dayColor[1] - nightColor[1]) * scrolled
-      );
-      const b = Math.round(
-        nightColor[2] + (dayColor[2] - nightColor[2]) * scrolled
-      );
+      // Sky gradient (night → day)
+      const night = [20, 30, 60];
+      const day = [135, 206, 235];
+      const r = Math.round(night[0] + (day[0] - night[0]) * progress);
+      const g = Math.round(night[1] + (day[1] - night[1]) * progress);
+      const b = Math.round(night[2] + (day[2] - night[2]) * progress);
 
-      if (skyRef.current) {
+      if (skyRef.current)
         skyRef.current.style.background = `rgb(${r}, ${g}, ${b})`;
-      }
 
-      if (cloudRef.current)
-        cloudRef.current.style.transform = `translateY(${scrollTop * 0}px)`;
-      if (mountainRef.current)
-        mountainRef.current.style.transform = `translateY(${
+      // Parallax transforms
+      layers.current.cloud &&
+        (layers.current.cloud.style.transform = `translateY(${
+          scrollTop * 0.05
+        }px)`);
+      layers.current.mountain &&
+        (layers.current.mountain.style.transform = `translateY(${
+          scrollTop * 0.1
+        }px)`);
+      layers.current.ground &&
+        (layers.current.ground.style.transform = `translateY(${
           scrollTop * 0.2
-        }px)`;
-      if (groundRef.current)
-        groundRef.current.style.transform = `translateY(${scrollTop * 0.1}px)`;
+        }px)`);
+
+      ticking = false;
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll();
+    updateParallax(); // initial call
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div ref={skyRef} className="sky-scroll">
-      <div className="sky-layer cloud" ref={cloudRef}>
-        <img src={cloud} alt="cloud" />
+      <div className="layer cloud" ref={(el) => (layers.current.cloud = el)}>
+        <img src={cloudImg} alt="Cloud" />
       </div>
-      <div className="sky-layer mountain" ref={mountainRef}>
-        <img src={mountain} alt="mountain" />
+      <div
+        className="layer mountain"
+        ref={(el) => (layers.current.mountain = el)}
+      >
+        <img src={mountainImg} alt="Mountain" />
       </div>
-      <div className="sky-layer ground" ref={groundRef}>
-        <img src={ground} alt="ground" />
+      <div className="layer ground" ref={(el) => (layers.current.ground = el)}>
+        <img src={groundImg} alt="Ground" />
       </div>
-      <div className="sky-scroll-content"></div>
     </div>
   );
 }

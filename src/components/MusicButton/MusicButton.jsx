@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import "./MusicButton.css";
-import musicFile from "../../assets/Music/Tribes - Main Theme.wav";
+import musicFile from "../../assets/Music/The Hunting Begins.wav";
 
 export default function MusicButton() {
   const [playing, setPlaying] = useState(false);
