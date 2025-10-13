@@ -31,16 +31,13 @@ export default function SkyScroll() {
 
       layers.current.cloud &&
         (layers.current.cloud.style.transform = `translateY(${
-          scrollTop * 0.05
+          scrollTop * 0.5
         }px)`);
       layers.current.mountain &&
         (layers.current.mountain.style.transform = `translateY(${
-          scrollTop * 0.1
-        }px)`);
-      layers.current.ground &&
-        (layers.current.ground.style.transform = `translateY(${
           scrollTop * 0.2
         }px)`);
+      
 
       ticking = false;
     };
