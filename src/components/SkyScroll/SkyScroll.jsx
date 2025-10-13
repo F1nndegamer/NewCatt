@@ -20,7 +20,6 @@ export default function SkyScroll() {
       const maxScroll = 300;
       const progress = Math.min(scrollTop / maxScroll, 1);
 
-      // Sky gradient (night → day)
       const night = [20, 30, 60];
       const day = [135, 206, 235];
       const r = Math.round(night[0] + (day[0] - night[0]) * progress);
@@ -30,7 +29,6 @@ export default function SkyScroll() {
       if (skyRef.current)
         skyRef.current.style.background = `rgb(${r}, ${g}, ${b})`;
 
-      // Parallax transforms
       layers.current.cloud &&
         (layers.current.cloud.style.transform = `translateY(${
           scrollTop * 0.05
@@ -55,7 +53,7 @@ export default function SkyScroll() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    updateParallax(); // initial call
+    updateParallax();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
