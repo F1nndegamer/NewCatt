@@ -19,7 +19,9 @@
 }
 
 .cloud {
-  top: -110%;
+  width: 29%;
+  top: 5%;
+  left: 700px;
   z-index: 3;
 }
 
