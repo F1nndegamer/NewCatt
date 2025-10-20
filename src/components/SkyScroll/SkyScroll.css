@@ -1,36 +1,43 @@
+/* Sky container */
 .sky-scroll {
   width: 100%;
   height: 100vh;
-  background: rgb(20, 30, 60);
+  background: rgb(20, 30, 60); /* night sky default */
   position: relative;
   overflow: hidden;
   transition: background 0.3s linear;
 }
 
+/* Common layer styling */
 .layer {
   position: absolute;
   width: 100%;
+  height: 100%;
+  top: 0;
   left: 0;
+  background-repeat: repeat-x;
+  background-position: top left;
+  background-size: auto; /* keeps original image size */
 }
 
-.layer img {
-  width: 100%;
-  display: block;
-}
-
+/* Cloud layer */
 .cloud {
-  width: 29%;
-  top: 5%;
-  left: 700px;
   z-index: 3;
+  background-image: url('../../assets/images/Background/Cloud.png');
+  top: 5%;
+  pointer-events: none; /* prevents accidental clicks on clouds */
 }
 
+/* Mountain layer */
 .mountain {
+  z-index: 1;
+  background-image: url('../../assets/images/Background/Mountain.png');
   bottom: -30%;
-  z-index: 0;
 }
 
+/* Ground layer */
 .ground {
+  z-index: 2;
+  background-image: url('../../assets/images/Background/Grass.png');
   bottom: -150%;
-  z-index: 1;
 }
