@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./SkyScroll.css";
 import cloudImg from "../../assets/images/Background/Cloud.png";
 import mountainImg from "../../assets/images/Background/Mountain.png";
@@ -12,7 +12,11 @@ export default function SkyScroll() {
     ground: null,
   });
 
+  const [active, setActive] = useState(null);
+
+  // Handle parallax
   useEffect(() => {
+    if (active) return; // Stop scroll effect while zoomed
     let ticking = false;
 
     const updateParallax = () => {
@@ -29,16 +33,10 @@ export default function SkyScroll() {
       if (skyRef.current)
         skyRef.current.style.background = `rgb(${r}, ${g}, ${b})`;
 
-      layers.current.cloud &&
-        (layers.current.cloud.style.transform = `translateY(${
-          scrollTop * 0.5
-        }px)`);
-      layers.current.mountain &&
-        (layers.current.mountain.style.transform = `translateY(${
-          scrollTop * 0.2
-        }px)`);
-      
-
+      layers.current.cloud.style.transform = `translateY(${scrollTop * 0.5}px)`;
+      layers.current.mountain.style.transform = `translateY(${
+        scrollTop * 0.2
+      }px)`;
       ticking = false;
     };
 
@@ -52,20 +50,55 @@ export default function SkyScroll() {
     window.addEventListener("scroll", handleScroll);
     updateParallax();
     return () => window.removeEventListener("scroll", handleScroll);
+  }, [active]);
+
+  // Handle click to zoom
+  const handleClick = (name) => {
+    if (active === name) {
+      setActive(null);
+      document.body.style.overflow = "auto";
+    } else {
+      setActive(name);
+      document.body.style.overflow = "hidden";
+      const element = layers.current[name];
+      element.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
+
+  // Click anywhere to exit zoom
+  useEffect(() => {
+    const exitZoom = (e) => {
+      if (!skyRef.current.contains(e.target)) return;
+      if (e.target.tagName !== "IMG") {
+        setActive(null);
+        document.body.style.overflow = "auto";
+      }
+    };
+    window.addEventListener("click", exitZoom);
+    return () => window.removeEventListener("click", exitZoom);
   }, []);
 
   return (
     <div ref={skyRef} className="sky-scroll">
-      <div className="layer cloud" ref={(el) => (layers.current.cloud = el)}>
+      <div
+        className={`layer cloud ${active === "cloud" ? "active" : ""}`}
+        ref={(el) => (layers.current.cloud = el)}
+        onClick={() => handleClick("cloud")}
+      >
         <img src={cloudImg} alt="Cloud" />
       </div>
       <div
-        className="layer mountain"
+        className={`layer mountain ${active === "mountain" ? "active" : ""}`}
         ref={(el) => (layers.current.mountain = el)}
+        onClick={() => handleClick("mountain")}
       >
         <img src={mountainImg} alt="Mountain" />
       </div>
-      <div className="layer ground" ref={(el) => (layers.current.ground = el)}>
+      <div
+        className={`layer ground ${active === "ground" ? "active" : ""}`}
+        ref={(el) => (layers.current.ground = el)}
+        onClick={() => handleClick("ground")}
+      >
         <img src={groundImg} alt="Ground" />
       </div>
     </div>

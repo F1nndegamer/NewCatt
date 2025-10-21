@@ -13,8 +13,8 @@ export default function App() {
     <div className="font-sans">
       <Header />
       <SkyScroll />
-      <AboutUs />
       <TribesSection />
+      <AboutUs />
       <ContactUs />
       <Footer />
       <MusicButton />

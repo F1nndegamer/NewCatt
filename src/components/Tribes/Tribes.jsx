@@ -15,18 +15,58 @@ export default function Tribes() {
     );
     setImages(imgs);
   }, []);
+  const [activeIndex, setActiveIndex] = useState(null);
+  const slideshowRef = React.useRef();
+
+  const handleImageClick = (index) => {
+    const slideshow = slideshowRef.current;
+    const img = slideshow.children[index];
+
+    if (activeIndex === index) {
+      setActiveIndex(null);
+      return;
+    }
+
+    setActiveIndex(index);
+
+    // Smoothly scroll the slideshow horizontally to center the clicked image
+    const offsetLeft =
+      img.offsetLeft - slideshow.offsetWidth / 2 + img.offsetWidth / 2;
+    slideshow.scrollTo({
+      left: offsetLeft,
+      behavior: "smooth",
+    });
+  };
+
+  // reset on outside click
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (!slideshowRef.current.contains(e.target)) {
+        setActiveIndex(null);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
 
   return (
     <div className="tribes-page">
       <h1 className="tribes-title">TRIBES</h1>
-      <div className="slideshow-container">
-        <div className="slideshow">
-          {images.concat(images).map((src, index) => (
-            <img key={index} src={src} alt={`tribe-${index}`} />
-          ))}
-        </div>
+      <div
+        className={`slideshow ${activeIndex !== null ? "paused" : ""}`}
+        ref={slideshowRef}
+      >
+        {images.concat(images).map((src, index) => (
+          <img
+            key={index}
+            src={src}
+            alt={`tribe-${index}`}
+            className={activeIndex === index ? "active" : ""}
+            onClick={() => handleImageClick(index)}
+          />
+        ))}
       </div>
-
+nnnnnnnnnnnnnnnnnnnnnmn
       <section className="tribes-info">
         <div className="history">
           <h2>History of Tribes</h2>

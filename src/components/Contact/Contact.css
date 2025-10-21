@@ -24,7 +24,7 @@
 }
 
 .contact-card {
-  flex: 0.3; /* default: very small width */
+  flex: 0.3; 
   min-width: 80px;
   height: 380px;
   overflow: hidden;

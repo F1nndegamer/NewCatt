@@ -115,7 +115,7 @@
 }
 
 .social-icons {
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .social-icons svg {
@@ -126,4 +126,18 @@
 
 .social-icons svg:hover {
   transform: scale(1.1);
+}
+.slideshow.paused {
+  animation-play-state: paused;
+}
+
+.slideshow img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.slideshow img.active {
+  transform: scale(1.25);
+  z-index: 5;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
