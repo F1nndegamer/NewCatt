@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./SkyScroll.css";
-import cloudImg from "../../assets/images/Background/Cloud.png";
+import cloudImg from "../../assets/images/Background/cloud.png";
 import mountainImg from "../../assets/images/Background/Mountain.png";
 import groundImg from "../../assets/images/Background/Grass.png";
 
