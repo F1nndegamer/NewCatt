@@ -66,7 +66,6 @@ export default function Tribes() {
           />
         ))}
       </div>
-nnnnnnnnnnnnnnnnnnnnnmn
       <section className="tribes-info">
         <div className="history">
           <h2>History of Tribes</h2>
