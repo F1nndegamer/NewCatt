@@ -19,7 +19,7 @@
   grid-column: 1 / -1;
   text-align: center;
   margin-bottom: 30px;
-  color: #fff;
+  color: #000000;
 }
 
 .team-header h2 {
@@ -85,7 +85,7 @@
   display: block;
   width: 100%;
   height: 1px;
-  background-color: #fff;
+  background-color: #ffffff;
   margin-top: 4px;
 }
 
@@ -100,4 +100,77 @@
   font-size: 0.95rem;
   line-height: 1.4;
   max-width: 300px;
+}
+.about-intro {
+  text-align: center;
+  color: #000000;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.timeline-section {
+  position: relative;
+  margin: 60px auto;
+  max-width: 900px;
+  color: #000000;
+}
+
+.timeline {
+  position: relative;
+  height: 6px;
+  background: #666;
+  border-radius: 3px;
+  margin-top: 40px;
+}
+
+.timeline-item {
+  position: absolute;
+  transform: translateX(-50%);
+  bottom: -60px;
+  text-align: center;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background: #000000;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.timeline-info {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.games-section {
+  text-align: center;
+  color: #fff;
+  margin: 60px auto;
+  max-width: 1200px;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.game-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.game-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }

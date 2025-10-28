@@ -1,6 +1,6 @@
 .sky-scroll {
   width: 100vw;
-  height: 100vh;
+  height: 127vh;
   background: rgb(20, 30, 60);
   position: relative;
   overflow: hidden;
@@ -27,7 +27,7 @@
 }
 
 .cloud {
-  --img-scale: 0.4;
+  --img-scale: 0.0000001;
   position: absolute;
   top: -80px;
   left: 600px;
@@ -35,17 +35,18 @@
 }
 
 .mountain {
-  --img-scale: 2;
+  filter: brightness(1);
+  --img-scale: 1.6;
   position: absolute;
-  top: 200px;
-  left: 645px;
+  top: 100px;
+  left: 340px;
   z-index: 0;
 }
 
 .ground {
-  --img-scale: 9;
+  --img-scale: 1.6;
   position: absolute;
-  top: 120px;
-  left: 1100px;
+  top: 410px;
+  left: 350px;
   z-index: 1;
 }

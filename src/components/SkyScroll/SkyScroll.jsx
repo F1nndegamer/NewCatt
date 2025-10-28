@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import "./SkyScroll.css";
 import cloudImg from "../../assets/images/Background/cloud.png";
-import mountainImg from "../../assets/images/Background/Mountain.png";
-import groundImg from "../../assets/images/Background/Grass.png";
+import mountainImg from "../../assets/images/Background/mountain2.png";
+import groundImg from "../../assets/images/Background/grass2.png";
 
 export default function SkyScroll() {
   const skyRef = useRef(null);

@@ -42,12 +42,12 @@
     transform: translateX(calc(-50% - 5px));
   }
 }
-
 .tribes-info {
   display: flex;
   justify-content: space-around;
   gap: 40px; /* adds space between the two text columns */
   margin-bottom: 50px;
+  margin-top: 20px;
   flex-wrap: wrap; /* make it responsive */
   text-align: left;
 }
@@ -55,7 +55,7 @@
 .tribes-info div {
   width: 40%;
   min-width: 280px;
-  background-color: #f7f7f7;
+  background-color: #cfcfcf;
   padding: 25px 30px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -141,3 +141,4 @@
   z-index: 5;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
+

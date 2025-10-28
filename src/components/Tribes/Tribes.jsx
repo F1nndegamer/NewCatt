@@ -70,16 +70,52 @@ export default function Tribes() {
         <div className="history">
           <h2>History of Tribes</h2>
           <p>
-            Tribes have existed for centuries, forming communities based on
-            culture, shared resources, and traditions. They shaped human
-            civilization in countless ways.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+            libero lorem, finibus a aliquet vitae, pulvinar in mi. Vestibulum
+            semper non sapien aliquet commodo. Aenean dapibus finibus turpis, ac
+            congue lorem ornare et. Ut hendrerit ante elit, nec tempus lorem
+            rhoncus tincidunt. Fusce tincidunt orci elit, dignissim hendrerit
+            justo cursus vitae. Duis efficitur vehicula urna. Nunc sodales,
+            velit eu gravida pulvinar, felis arcu interdum metus, at vehicula
+            urna augue at lacus. Sed vel nulla ipsum. Sed consequat consectetur
+            ante, tempor malesuada lacus malesuada in. Vestibulum vel nisi non
+            purus placerat porta. Pellentesque habitant morbi tristique senectus
+            et netus et malesuada fames ac turpis egestas.
+            <br /> <br />
+            Morbi ac ante sed nulla efficitur lacinia. Sed eu tempus nisl.
+            Mauris eleifend nisl lectus. Vestibulum aliquet ante at est
+            ultricies molestie. Integer vel accumsan urna. Donec eget ornare
+            metus, at dignissim turpis. In hac habitasse platea dictumst.
+            Pellentesque tempor rutrum arcu vitae pharetra. Aliquam aliquam
+            magna vel nunc fermentum sodales. Suspendisse pharetra magna ac erat
+            ultricies accumsan. Sed feugiat mollis odio quis fringilla. Vivamus
+            ut mi id sem porttitor dictum. Suspendisse in eleifend dolor, sed
+            sagittis massa. Nulla facilisi.
           </p>
         </div>
         <div className="future-goals">
           <h2>Future Goals</h2>
           <p>
-            Our goal is to preserve tribal knowledge, foster unity among
-            communities, and ensure sustainable growth for future generations.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+            libero lorem, finibus a aliquet vitae, pulvinar in mi. Vestibulum
+            semper non sapien aliquet commodo. Aenean dapibus finibus turpis, ac
+            congue lorem ornare et. Ut hendrerit ante elit, nec tempus lorem
+            rhoncus tincidunt. Fusce tincidunt orci elit, dignissim hendrerit
+            justo cursus vitae. Duis efficitur vehicula urna. Nunc sodales,
+            velit eu gravida pulvinar, felis arcu interdum metus, at vehicula
+            urna augue at lacus. Sed vel nulla ipsum. Sed consequat consectetur
+            ante, tempor malesuada lacus malesuada in. Vestibulum vel nisi non
+            purus placerat porta. Pellentesque habitant morbi tristique senectus
+            et netus et malesuada fames ac turpis egestas. <br /> <br />
+            Morbi ac ante sed nulla efficitur lacinia. Sed eu tempus nisl.
+            Mauris eleifend nisl lectus. Vestibulum aliquet ante at est
+            ultricies molestie. Integer vel accumsan urna. Donec eget ornare
+            metus, at dignissim turpis. In hac habitasse platea dictumst.
+            Pellentesque tempor rutrum arcu vitae pharetra. Aliquam aliquam
+            magna vel nunc fermentum sodales. Suspendisse pharetra magna ac erat
+            ultricies accumsan. Sed feugiat mollis odio quis fringilla. Vivamus
+            ut mi id sem porttitor dictum. Suspendisse in eleifend dolor, sed
+            sagittis massa. Nulla facilisi.
           </p>
         </div>
       </section>
