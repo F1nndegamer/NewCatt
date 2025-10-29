@@ -131,17 +131,21 @@
 }
 
 .timeline-dot {
-  width: 14px;
-  height: 14px;
-  background: #000000;
-  border-radius: 50%;
-  margin: 0 auto;
+  width: 7px;
+  height: 40px;
+  background: #020202;
+  margin: auto;
+  margin-bottom: -18px;
 }
 
 .timeline-info {
   margin-top: 10px;
   font-size: 0.9rem;
 }
+.timeline-info h3 {
+  margin-bottom: 0px;
+}
+
 
 .games-section {
   text-align: center;
