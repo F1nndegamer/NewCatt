@@ -23,21 +23,21 @@ export const profiles = [
   },
   {
     name: "F1nn",
-    job: "programmer",
+    job: "Programmer",
     image: ProfilePic3,
     description:
       "F1nn is one of our programmers, located in The Netherlands and has 7 years of experience in the game development field, he primarily focuses on optimization and gameplay mechanics.",
   },
   {
     name: "Arda",
-    job: "programmer",
+    job: "Programmer",
     image: ProfilePic4,
     description:
       "Arda is one of our programmers and is the other founder of C.S, located in NL and has 3 years of experience in the game development field.",
   },
   {
     name: "'Orange'",
-    job: "programmer",
+    job: "Programmer",
     image: ProfilePic5,
     description:
       "Orange is one of our programmers, specializes in game AI bots and is located in India, with 6 years of experience.",
@@ -45,14 +45,14 @@ export const profiles = [
 
   {
     name: "Alex",
-    job: "programmer",
+    job: "Programmer",
     image: ProfilePic6,
     description:
       "Alex is one of our programmers, located in Ireland and has 1 year of experience.",
   },
   {
     name: "Joel",
-    job: "musician",
+    job: "Musician",
     image: ProfilePic7,
     description:
       "Joel is our musician and sound designer, located in Argentina and has 500 years of experience in the music industry.",
