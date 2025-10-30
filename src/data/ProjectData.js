@@ -40,7 +40,7 @@ export const profiles = [
     job: "programmer",
     image: ProfilePic5,
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis n",
+      "orange is one of our programmers, specialsizes in game AI bots and is located in INDIA, with 6 years of experience",
   },
 
   {
