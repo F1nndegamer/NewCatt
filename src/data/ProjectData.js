@@ -12,28 +12,28 @@ export const profiles = [
     job: "Artist",
     image: ProfilePic1,
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis n",
+      "dillon is the main artist and is one of the founding members of catastrophe studios, he is from Ireland and works off of aseprite",
   },
   {
     name: "Ava",
     job: "Artist",
     image: ProfilePic2,
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis n",
+      "ava is the secondary artist, located in Ireland and primarily uses aseprite",
   },
   {
     name: "F1nn",
     job: "programmer",
     image: ProfilePic3,
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis n",
+      "F1nn is one of our programmers, located in The Netherlands and has 7 years of experience in the game development field, he primarily focuses on optimization and gameplay mechanics",
   },
   {
     name: "Arda",
     job: "programmer",
     image: ProfilePic4,
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis n",
+      "arxar is one of our programmers and is the other founder of C.S, located in NL and has 3 years of experience in the game development field",
   },
   {
     name: "'Orange'",
@@ -48,7 +48,7 @@ export const profiles = [
     job: "programmer",
     image: ProfilePic6,
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis n",
+      "alex is one of our programmers, located in Ireland and has 1 year of experience",
   },
   {
     name: "Joel",
