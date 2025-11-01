@@ -1,10 +1,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 body, html {
+  overflow-x: hidden;
   text-align: center;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  body {
+  background: radial-gradient(circle at center 70%, #c79a60 0%, #945627 40%, #5a3e2b 100%);
+}
+  color: #d8b774;
 }
 * {
   box-sizing: inherit;
