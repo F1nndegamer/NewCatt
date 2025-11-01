@@ -29,7 +29,6 @@ export default function Tribes() {
 
     setActiveIndex(index);
 
-    // Smoothly scroll the slideshow horizontally to center the clicked image
     const offsetLeft =
       img.offsetLeft - slideshow.offsetWidth / 2 + img.offsetWidth / 2;
     slideshow.scrollTo({
@@ -38,7 +37,6 @@ export default function Tribes() {
     });
   };
 
-  // reset on outside click
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (!slideshowRef.current.contains(e.target)) {
