@@ -17,19 +17,23 @@ export default function About() {
       <section className="timeline-section">
         <h2>Our Journey</h2>
         <div className="timeline">
-          {timelineData.map((event, index) => (
-            <div
-              key={index}
-              className="timeline-item"
-              style={{ left: `${event.position}%` }}
-            >
-              <div className="timeline-dot" />
-              <div className="timeline-info">
-                <h3>{event.year}</h3>
-                <p>{event.text}</p>
+          {timelineData.map((event, index) => {
+            const left = (index / (timelineData.length - 1)) * 100;
+            const isAbove = index % 2 === 0;
+            return (
+              <div
+                key={index}
+                className={`timeline-item ${isAbove ? "above" : "below"}`}
+                style={{ left: `${left}%` }}
+              >
+                <div className="timeline-dot"></div>
+                <div className="timeline-info">
+                  <h3>{event.year}</h3>
+                  <p>{event.text}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
