@@ -3,11 +3,18 @@
   margin-bottom: 40px;
   letter-spacing: 2px;
 }
+.tribes-logo {
+  display: block;
+  margin: 30px auto;
+  max-width: 380px;
+  width: 80%;
+  height: auto;
+}
 .tribes-page {
   text-align: center;
   padding: 40px 20px;
   color: var(--text-2);
-  line-height: 1.7; /* smoother text spacing */
+  line-height: 1.7;
 }
 
 .tribes-title {
@@ -50,10 +57,10 @@
 .tribes-info {
   display: flex;
   justify-content: space-around;
-  gap: 40px; /* adds space between the two text columns */
+  gap: 40px;
   margin-bottom: 50px;
   margin-top: 20px;
-  flex-wrap: wrap; /* make it responsive */
+  flex-wrap: wrap;
   text-align: left;
 }
 
@@ -123,6 +130,7 @@
 
 .social-icons {
   margin-top: 0px;
+  margin-bottom: -60px;
 }
 
 .social-icons svg {

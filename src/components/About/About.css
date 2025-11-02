@@ -32,6 +32,11 @@ h1 {
   color: var(--text-2);
 }
 
+.journey-header h2 {
+  font-size: 2rem;
+  color: var(--text-2);
+  margin-bottom: 100px;
+}
 .profile-card {
   display: flex;
   align-items: center;
@@ -126,7 +131,7 @@ h1 {
   background: linear-gradient(90deg, var(--text), var(--text-2), var(--text));
   border-radius: 4px;
   margin: 60px 0;
-  margin-bottom: 160px;
+  margin-bottom: 170px;
 }
 .timeline-item {
   position: absolute;

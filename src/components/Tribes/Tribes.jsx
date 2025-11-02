@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import "./Tribes.css";
+import logo from "../../assets/icons/games/tribes.png";
 
 export default function Tribes() {
   const [images, setImages] = useState([]);
@@ -49,7 +50,7 @@ export default function Tribes() {
 
   return (
     <div className="tribes-page">
-      <h1 className="tribes-title">TRIBES</h1>
+      <img src={logo} alt="TRIBES" className="tribes-logo" />
       <div
         className={`slideshow ${activeIndex !== null ? "paused" : ""}`}
         ref={slideshowRef}

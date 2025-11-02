@@ -15,7 +15,9 @@ export default function About() {
       </section>
 
       <section className="timeline-section">
-        <h2>Our Journey</h2>
+        <div className="journey-header">
+          <h2>Our Journey</h2>
+        </div>
         <div className="timeline">
           {timelineData.map((event, index) => {
             const left = (index / (timelineData.length - 1)) * 100;
@@ -39,7 +41,7 @@ export default function About() {
 
       <section className="games-section">
         <div className="game-header">
-          <h2>The games we made</h2>
+          <h2>Game catalogue</h2>
         </div>
         <div className="games-grid">
           {games.map((game, index) => (

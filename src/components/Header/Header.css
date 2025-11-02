@@ -37,7 +37,7 @@
   color: var(--text);
 }
 .nav-links {
-  margin-right: 171px;
+  margin-right: 0px;
 }
 .nav-links a {
   margin: 0 10px;

@@ -1,7 +1,5 @@
 .sky-scroll {
-  /* use 100% width to avoid horizontal gaps caused by scrollbars on large screens */
   width: 100%;
-  /* keep the tall viewport for parallax but allow height to expand if needed */
   min-height: 100vh;
   height: 127vh;
   background: var(--sky-bg);
@@ -14,7 +12,6 @@
   position: absolute;
   left: 0;
   top: 0;
-  /* make each layer span the full container so images can cover without gaps */
   width: 100%;
   height: 100%;
   transform-origin: center center;
@@ -23,19 +20,15 @@
 
 .layer img {
   display: block;
-  /* ensure images cover their layer area to avoid empty space */
-  /* size images by height so they keep correct aspect ratio but fill vertically */
   width: auto;
   height: 100%;
   max-width: none;
   object-fit: cover;
-  /* keep parallax depth small so images don't become massively larger than container */
   transform: scale(var(--img-scale, 1));
   transform-origin: center;
 }
 
 .cloud {
-  /* cloud should not be dramatically scaled */
   --img-scale: 0;
   position: absolute;
   top: -80px;
@@ -45,19 +38,17 @@
 
 .mountain {
   filter: brightness(1);
-  /* keep mountain scale subtle so it won't overflow */
   --img-scale: 1.05;
   position: absolute;
-  top: 100px;
+  top: -90px;
   left: 50px;
   z-index: 0;
 }
 
 .ground {
-  /* ground scale should be modest too */
   --img-scale: 1.05;
   position: absolute;
-  top: 410px;
+  top: 120px;
   left: 62px;
   z-index: 1;
 }

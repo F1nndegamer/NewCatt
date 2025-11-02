@@ -14,9 +14,8 @@ export default function SkyScroll() {
 
   const [active, setActive] = useState(null);
 
-  // Handle parallax
   useEffect(() => {
-    if (active) return; // Stop scroll effect while zoomed
+    if (active) return;
     let ticking = false;
 
     const updateParallax = () => {
@@ -52,7 +51,6 @@ export default function SkyScroll() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [active]);
 
-  // Handle click to zoom
   const handleClick = (name) => {
     if (active === name) {
       setActive(null);
@@ -65,7 +63,6 @@ export default function SkyScroll() {
     }
   };
 
-  // Click anywhere to exit zoom
   useEffect(() => {
     const exitZoom = (e) => {
       if (!skyRef.current.contains(e.target)) return;
