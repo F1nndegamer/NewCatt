@@ -1,8 +1,23 @@
 .contact-container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 80px 20px; /* increased vertical space */
   text-align: center;
+  position: relative; /* allow full-width background pseudo-element */
+  z-index: 1;
+  background: transparent; /* visual background is provided by ::before */
+}
+
+.contact-container::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -50px;
+  bottom: 0;
+  width: 100vw; /* span full viewport width */
+  background: #3e3746;
+  z-index: -1;
 }
 
 .contact-title {
@@ -27,7 +42,7 @@
   min-width: 80px;
   height: 380px;
   overflow: hidden;
-  background: var(--surface-2);
+  background: var(--surface-5);
   border-radius: 20px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   padding: 30px 20px;

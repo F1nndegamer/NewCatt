@@ -3,15 +3,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
-  --text: #ffffff; /* text base */
+  --text: #fffb; /* text base */
   --text-accent: #b1b1b1; /* for subtitles */
   --text-2: #000000; /* against white bg */
+  --text-3: #ece5d4; /* for brown bg */
   --accent: #8eac89;
   --accent-dark: #6f8a6c;
 
   --surface: #1a1a1a;
-  --surface-2: #919191; /* lighter version */
+  --surface-2: #605855; /* lighter version */
   --surface-3: #474747; /* slightly different */
+  --surface-4: #29242e; /* pink one */
+  --surface-5: #fffb; /* pink one */
   --link-hover: #8eac89; /* HOVER color */
 
   --border: #333; /* Border */
@@ -25,7 +28,7 @@
     "Helvetica Neue", Arial, sans-serif;
   --heading-font: "Momo Trust Display", var(--font-family);
   --transparent: #00000000;
-  --overlay: #96cbe99f;
+  --overlay: #ffffffa9;
   --debug: #ff00ff;
   --bg-grad1: #e9e2d0;
   --bg-grad2: #a38431;
@@ -39,12 +42,6 @@ html {
   box-sizing: border-box;
   font-family: var(--font-family);
   /* radial background: white center, then bg-grad1 (middle), bg-grad2 (outer) */
-  background: radial-gradient(
-    circle at center,
-    #ffffff 0%,
-    var(--bg-grad1) 55%,
-    var(--bg-grad2) 100%
-  );
   background-repeat: no-repeat;
   background-attachment: fixed;
 }

@@ -1,12 +1,13 @@
 import TribesImage from "../assets/images/Games/Name.jpeg";
 import PlaceHolder from "../assets/images/Games/PlaceHodler.png";
 export const timelineData = [
-  { year: "2022", text: "Studio founded"},
-  { year: "2023", text: "First game released"},
-  { year: "2025", text: "Expanded to a new team"},
-  { year: "2026", text: "Tribes released"}
+  { year: "28/12/2024", text: "Studio Founded" },
+  { year: "07/02/2025", text: "Started Development of Tribes" },
+  { year: "09/06/2025", text: "Tribes Demo Release" },
+  { year: "18/09/2025", text: "Expanded the team" },
+  { year: "??/12/2025", text: "Tribes Demo 2 Release" },
+  { year: "1st ½ of 2026", text: "Tribes Release" },
 ];
-
 export const games = [
   {
     name: "Tribes",

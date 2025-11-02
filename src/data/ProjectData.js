@@ -55,6 +55,6 @@ export const profiles = [
     job: "Musician",
     image: ProfilePic7,
     description:
-      "Joel is our musician and sound designer, located in Argentina and has 500 years of experience in the music industry.",
+      "Joel is our musician and sound designer, located in Argentina and has 43.824 hours of experience in the music industry.",
   },
 ];

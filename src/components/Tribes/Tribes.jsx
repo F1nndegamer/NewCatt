@@ -95,26 +95,16 @@ export default function Tribes() {
         <div className="future-goals">
           <h2>Future Goals</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-            libero lorem, finibus a aliquet vitae, pulvinar in mi. Vestibulum
-            semper non sapien aliquet commodo. Aenean dapibus finibus turpis, ac
-            congue lorem ornare et. Ut hendrerit ante elit, nec tempus lorem
-            rhoncus tincidunt. Fusce tincidunt orci elit, dignissim hendrerit
-            justo cursus vitae. Duis efficitur vehicula urna. Nunc sodales,
-            velit eu gravida pulvinar, felis arcu interdum metus, at vehicula
-            urna augue at lacus. Sed vel nulla ipsum. Sed consequat consectetur
-            ante, tempor malesuada lacus malesuada in. Vestibulum vel nisi non
-            purus placerat porta. Pellentesque habitant morbi tristique senectus
-            et netus et malesuada fames ac turpis egestas. <br /> <br />
-            Morbi ac ante sed nulla efficitur lacinia. Sed eu tempus nisl.
-            Mauris eleifend nisl lectus. Vestibulum aliquet ante at est
-            ultricies molestie. Integer vel accumsan urna. Donec eget ornare
-            metus, at dignissim turpis. In hac habitasse platea dictumst.
-            Pellentesque tempor rutrum arcu vitae pharetra. Aliquam aliquam
-            magna vel nunc fermentum sodales. Suspendisse pharetra magna ac erat
-            ultricies accumsan. Sed feugiat mollis odio quis fringilla. Vivamus
-            ut mi id sem porttitor dictum. Suspendisse in eleifend dolor, sed
-            sagittis massa. Nulla facilisi.
+            Future After releasing Tribes fully we would like to update Tribes
+            throughout 2026 to get it to an amazing state and round up the game
+            to a good and finished point. (We will still have the option of
+            coming back and adding more and we will be working on bug fixes
+            ofcourse) <br /> <br /> After Tribes we dont have a set game idea we would like to
+            work on. There are tons of game genres and things we would like to
+            try and possibly even go back to work on some of our older games. We
+            have a high chance to even try out 3D games and very different
+            genres from Tribes. However this will all happen according to how
+            things go with Tribes and our personal lives.
           </p>
         </div>
       </section>

@@ -5,15 +5,16 @@
 }
 .tribes-logo {
   display: block;
-  margin: 30px auto;
-  max-width: 380px;
-  width: 80%;
-  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: -70px;
+  height: 300px;
+  width: auto;
 }
 .tribes-page {
   text-align: center;
   padding: 40px 20px;
-  color: var(--text-2);
+  color: var(--text-3);
   line-height: 1.7;
 }
 
@@ -76,7 +77,7 @@
 .tribes-info h2 {
   font-size: 24px;
   margin-bottom: 15px;
-  color: var(--text-2);
+  color: var(--text-3);
 }
 
 .tribes-info p {
@@ -129,6 +130,7 @@
 }
 
 .social-icons {
+  color: var(--text-2);
   margin-top: 0px;
   margin-bottom: -60px;
 }
