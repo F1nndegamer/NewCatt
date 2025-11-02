@@ -1,12 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-body, html {
+:root {
+  --text: #ffffff; /* text base */
+  --text-accent: #b1b1b1; /* for subtitles */
+  --text-2: #000000; /* against white bg */
+  --accent: #8eac89;
+  --accent-dark: #6f8a6c;
+
+  --surface: #1a1a1a;
+  --surface-2: #919191; /* lighter version */
+  --surface-3: #474747; /* slightly different */
+  --link-hover: #8eac89; /* HOVER color */
+
+  --border: #333; /* Border */
+
+  --accent-2: var(--accent-dark);
+  --accent-cta: var(--accent);
+
+  --music-button: var(--surface-2);
+
+  --font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --transparent: #00000000;
+  --overlay: #96cbe99f;
+  --debug: #ff00ff;
+}
+body,
+html {
   text-align: center;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--font-family);
 }
+
 * {
   box-sizing: inherit;
 }

@@ -38,7 +38,9 @@ export default function About() {
       </section>
 
       <section className="games-section">
-        <h2>Games We Made</h2>
+        <div className="game-header">
+          <h2>The games we made</h2>
+        </div>
         <div className="games-grid">
           {games.map((game, index) => (
             <div key={index} className="game-card">

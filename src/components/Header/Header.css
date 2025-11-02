@@ -1,19 +1,9 @@
-:root {
-  --bg: #003bec;
-  --text: #ffffff;
-  --text2: rgb(0, 0, 0);
-  --accent: #8eac89;
-  --accent-dark: #6f8a6c;
-  --bg1: #95b7cb00;
-  --bg2: #95b7cbb6;
-  --link-hover: var(--accent);
-}
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background-color: var(--bg1);
+  background-color: var(--transparent);
   position: fixed;
   top: 0;
   left: 0;
@@ -21,8 +11,8 @@
   z-index: 1000;
 }
 .header-active {
-  background-color: var(--bg2);
-  --text: #000000;
+  background-color: var(--overlay);
+  --text: var(--text-2);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -31,16 +21,18 @@
   align-items: center;
 }
 
-h1 {
+.header h1 {
   color: var(--text);
-  font-family: "Press Start 2P", cursive;
   font-size: 18px;
+  transition: color 0.3s ease;
 }
 
+.header-active h1 {
+  color: var(--text-2);
+}
 .nav-links a {
   margin: 0 10px;
   text-decoration: none;
-  font-family: "Roboto Mono", monospace;
   font-weight: bold;
   color: var(--text);
 }
@@ -50,7 +42,6 @@ h1 {
 .nav-links a {
   margin: 0 10px;
   text-decoration: none;
-  font-family: "Roboto Mono", monospace;
   font-weight: bold;
   color: var(--text);
 }

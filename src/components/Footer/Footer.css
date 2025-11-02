@@ -1,27 +1,27 @@
 .footer {
-  background-color: #0f172a;
-  color: #94a3b8;
+  background-color: var(--surface);
+  color: var(--text-accent);
   text-align: center;
   padding: 10px 20px;
-  border-top: 1px solid #1e293b;
+  border-top: 1px solid var(--border);
 }
 .footer .socials a {
   margin: 0 3px;
-  color: #cbd5e1;
+  color: var(--text-accent);
   font-size: 1.3rem;
 }
 .footer .socials {
   display: flex;
   justify-content: center;
   font-size: 1.5rem;
-  color: #cbd5e1;
+  color: var(--text-accent);
 }
 
 .footer .socials a:hover {
-  color: #f88181;
+  color: var(--accent);
 }
 .footer p {
   margin-top: 10px;
   font-size: 0.9rem;
-  color: #94a3b8;
+  color: var(--text-accent);
 }

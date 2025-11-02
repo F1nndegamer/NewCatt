@@ -5,8 +5,7 @@
   max-width: 2000px;
   margin: 50px auto;
   padding: 40px;
-  font-family: "Inter", sans-serif;
-  background-color: #424242b0;
+  background-color: var(--surface-2);
   border-radius: 16px;
   .profile-card:last-child {
     grid-column: 1 / span 2;
@@ -15,24 +14,29 @@
   }
 }
 h1 {
-  color: #000000;
+  color: var(--text-2);
 }
 .team-header {
   grid-column: 1 / -1;
   text-align: center;
   margin-bottom: 30px;
-  color: #000000;
+  color: var(--text-2);
 }
 
 .team-header h2 {
   font-size: 2rem;
+  color: var(--text-2);
+}
+.game-header h2 {
+  font-size: 2rem;
+  color: var(--text-2);
 }
 
 .profile-card {
   display: flex;
   align-items: center;
-  background: #1a1a1a;
-  border: 1px solid #333;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 20px;
   backdrop-filter: blur(6px);
@@ -40,7 +44,7 @@ h1 {
 }
 
 .about-text {
-  color: #ddd;
+  color: var(--text-2);
   font-size: 1.1rem;
   max-width: 600px;
   margin: 0 auto 30px auto;
@@ -74,7 +78,7 @@ h1 {
   margin: 0;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--text);
   padding-bottom: 6px;
   position: relative;
 }
@@ -84,25 +88,25 @@ h1 {
   display: block;
   width: 100%;
   height: 1px;
-  background-color: #ffffff;
+  background-color: var(--text);
   margin-top: 4px;
 }
 
 .profile-job {
   margin-top: 4px;
-  color: #ccc;
+  color: var(--text-accent);
   font-size: 1.1rem;
 }
 
 .profile-description {
-  color: #aaa;
+  color: var(--text);
   font-size: 0.95rem;
   line-height: 1.4;
   max-width: 300px;
 }
 .about-intro {
   text-align: center;
-  color: #000000;
+  color: var(--text-2);
   max-width: 800px;
   margin: 40px auto;
 }
@@ -113,15 +117,16 @@ h1 {
   margin-bottom: 100px;
   max-width: 1000px;
   text-align: center;
-  color: #fff;
+  color: var(--text);
 }
 
 .timeline {
   position: relative;
   height: 4px;
-  background: linear-gradient(90deg, #555, #999, #555);
+  background: linear-gradient(90deg, var(--text), var(--text-2), var(--text));
   border-radius: 4px;
   margin: 60px 0;
+  margin-bottom: 160px;
 }
 .timeline-item {
   position: absolute;
@@ -142,42 +147,42 @@ h1 {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #fff;
-  border: 2px solid #000;
+  background: var(--text);
+  border: 2px solid var(--text-2);
   margin: 0 auto;
   position: relative;
-  box-shadow: 0 0 10px #fff5;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.35);
 }
 
 .timeline-item:hover .timeline-dot {
   transform: scale(1.2);
-  box-shadow: 0 0 20px #fff8;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.47);
 }
 
 .timeline-info {
-  background: #1a1a1a;
-  border: 1px solid #333;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 10px 15px;
   margin-top: 12px;
-  color: #ddd;
+  color: var(--text-2);
 }
 
 .timeline-info h3 {
   margin: 0;
   font-size: 1.1rem;
-  color: #fff;
+  color: var(--text);
 }
 
 .timeline-info p {
   margin: 4px 0 0;
   font-size: 0.9rem;
-  color: #ccc;
+  color: var(--text);
 }
 
 .games-section {
   text-align: center;
-  color: #fff;
+  color: var(--text);
   margin: 60px auto;
   max-width: 1200px;
 }
@@ -190,8 +195,8 @@ h1 {
 }
 
 .game-card {
-  background: #1a1a1a;
-  border: 1px solid #333;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 20px;
   transition: transform 0.2s ease;
