@@ -6,6 +6,8 @@
   position: relative;
   overflow: hidden;
   transition: background 0.3s linear;
+  /* subtle outer shadow so the segment lifts off the page */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
 }
 
 .layer {
@@ -26,6 +28,7 @@
   object-fit: cover;
   transform: scale(var(--img-scale, 1));
   transform-origin: center;
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.24));
 }
 
 .cloud {
@@ -51,4 +54,19 @@
   top: 120px;
   left: 62px;
   z-index: 1;
+}
+.sky-scroll::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 140px;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+  z-index: 10;
 }

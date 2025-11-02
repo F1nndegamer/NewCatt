@@ -42,7 +42,7 @@ html {
   background: radial-gradient(
     circle at center,
     #ffffff 0%,
-    var(--bg-grad1) 35%,
+    var(--bg-grad1) 55%,
     var(--bg-grad2) 100%
   );
   background-repeat: no-repeat;
