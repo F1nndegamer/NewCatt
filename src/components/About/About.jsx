@@ -2,6 +2,7 @@ import React from "react";
 import {timelineData, games } from "../../data/AboutData";
 import { profiles } from "../../data/ProjectData";
 import "./About.css";
+import teamlogo from "../../assets/images/Profile/logo.png";
 
 export default function About() {
   return (
@@ -56,6 +57,9 @@ export default function About() {
 
       <section className="team-section">
         <div className="profiles-container">
+          <div className="team-logo">
+            <img src={teamlogo} alt="Team Logo" className="team-logo-image" />
+          </div>
           <div className="team-header">
             <h2>Meet our team</h2>
           </div>

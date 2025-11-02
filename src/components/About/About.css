@@ -16,6 +16,18 @@
 h1 {
   color: var(--text-2);
 }
+.team-logo-image {
+  width: 300px;
+  height: auto;
+}
+.team-logo {
+  grid-column: 1 / -1; /* span both columns */
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically if needed */
+  margin-bottom: -110px;
+  margin-top: -60px;
+}
 .team-header {
   grid-column: 1 / -1;
   text-align: center;
