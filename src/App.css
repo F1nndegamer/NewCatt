@@ -53,11 +53,16 @@ body,
 html {
   scroll-behavior: smooth;
   text-align: center;
-  overflow-x: hidden;
+  overflow-x: auto; /* allow horizontal scroll instead of collapsing content when zoomed out */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font-family);
+  /* Keep a stable base font size so elements don't become tiny when zooming out */
+  font-size: 16px;
+  /* Prevent the layout from shrinking below a usable width — change this value if you prefer
+     horizontal scroll earlier or later. This stops content from getting extremely small on zoom out. */
+  min-width: 1000px;
   /* radial background: white center, then bg-grad1 (middle), bg-grad2 (outer) */
   background-repeat: no-repeat;
   background-attachment: fixed;
