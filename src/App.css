@@ -3,35 +3,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
-  --text: #fffb; /* text base */
-  --text-accent: #b1b1b1; /* for subtitles */
-  --text-2: #000000; /* against white bg */
-  --text-3: #ece5d4; /* for brown bg */
-  --accent: #8eac89;
-  --accent-dark: #6f8a6c;
-
-  --surface: #1a1a1a;
-  --surface-2: #605855; /* lighter version */
-  --surface-3: #474747; /* slightly different */
-  --surface-4: #29242e; /* pink one */
-  --surface-5: #fffb; /* pink one */
-  --link-hover: #8eac89; /* HOVER color */
-
-  --border: #333; /* Border */
-
-  --accent-2: var(--accent-dark);
-  --accent-cta: var(--accent);
-
-  --music-button: var(--surface-2);
-
+  /* Centralized simplified palette (keeps existing variable names to avoid breaking components)
+     - Only a few distinct color values are used; components reference these vars.
+  */
   --font-family: "Kanit", "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   --heading-font: "Momo Trust Display", var(--font-family);
-  --transparent: #00000000;
-  --overlay: #ffffffa9;
+
+  /* Text colors */
+  --text: #ffffff; /* primary text on dark surfaces */
+  --text-accent: #bdbdbd; /* muted/subtitles */
+  --text-2: #111111; /* primary text on light backgrounds */
+  --text-3: #ece5d4; /* legacy warm text used in some sections */
+
+  /* Accent colors (one primary accent + a darker variant) */
+  --accent: #7aa47a;
+  --accent-dark: #5f7d60;
+  --accent-2: var(--accent-dark);
+  --accent-cta: var(--accent);
+  --link-hover: var(--accent);
+
+  /* Surfaces (dark theme bases). Keep a few shades for depth. */
+  --surface: #121217; /* main card/background dark */
+  --surface-2: #242428; /* slightly lighter */
+  --surface-3: #3e3746; /* used as a mid background (kept value used previously) */
+  --surface-4: #2e2a2f; /* small variant kept for compatibility */
+  --surface-5: rgba(255, 255, 255, 0.03);
+
+  --border: #232323;
+
+  /* Music button color (referencing surface shades) */
+  --music-button: var(--surface-2);
+
+  /* Page background gradients */
+  --bg-grad1: #f6f5f1;
+  --bg-grad2: #e7dfc6;
+
+  /* Sky section background (used by SkyScroll) */
+  --sky-bg: linear-gradient(180deg, #e9e2d0 0%, #a38431 100%);
+
+  /* Utilities */
+  --transparent: transparent;
+  --overlay: rgba(255, 255, 255, 0.66);
   --debug: #ff00ff;
-  --bg-grad1: #e9e2d0;
-  --bg-grad2: #a38431;
 }
 body,
 html {
