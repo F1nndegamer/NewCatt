@@ -37,7 +37,7 @@ export default function Contact({
   const [active, setActive] = useState(items[0].id);
 
   return (
-    <section className="contact-container">
+    <section className="contact-container" id="contact">
       <h2 className="contact-title">Contact Us</h2>
 
       <div className="contact-cards">

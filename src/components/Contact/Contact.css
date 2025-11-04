@@ -16,8 +16,7 @@
   top: -50px;
   bottom: 0;
   width: 100vw; /* span full viewport width */
-  /* replaced literal with centralized variable */
-  background: var(--surface-3);
+  background: #3e3746;
   z-index: -1;
 }
 
@@ -107,6 +106,7 @@
 }
 
 .contact-button {
+  text-decoration: none;
   display: inline-block;
   background: var(--surface-2);
   color: var(--text-2);
@@ -118,6 +118,8 @@
 }
 
 .contact-button:hover {
+  text-decoration: none;
+  color: var(--text);
   background: var(--link-hover);
   transform: translateY(-2px);
 }

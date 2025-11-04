@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaTiktok, FaWikipediaW, FaDiscord, FaPatreon, FaYoutube } from "react-icons/fa";
 import "./Tribes.css";
 import logo from "../../assets/icons/games/tribes.png";
+import { BsTiktok } from "react-icons/bs";
 
 export default function Tribes() {
   const [images, setImages] = useState([]);
@@ -49,7 +50,7 @@ export default function Tribes() {
   }, []);
 
   return (
-    <div className="tribes-page">
+    <div className="tribes-page" id="tribes">
       <img src={logo} alt="TRIBES" className="tribes-logo" />
       <div
         className={`slideshow ${activeIndex !== null ? "paused" : ""}`}
@@ -99,12 +100,12 @@ export default function Tribes() {
             throughout 2026 to get it to an amazing state and round up the game
             to a good and finished point. (We will still have the option of
             coming back and adding more and we will be working on bug fixes
-            ofcourse) <br /> <br /> After Tribes we dont have a set game idea we would like to
-            work on. There are tons of game genres and things we would like to
-            try and possibly even go back to work on some of our older games. We
-            have a high chance to even try out 3D games and very different
-            genres from Tribes. However this will all happen according to how
-            things go with Tribes and our personal lives.
+            ofcourse) <br /> <br /> After Tribes we dont have a set game idea we
+            would like to work on. There are tons of game genres and things we
+            would like to try and possibly even go back to work on some of our
+            older games. We have a high chance to even try out 3D games and very
+            different genres from Tribes. However this will all happen according
+            to how things go with Tribes and our personal lives.
           </p>
         </div>
       </section>
@@ -132,9 +133,8 @@ export default function Tribes() {
         ></iframe>
       </div>
       <div className="social-icons">
-        <FaFacebook size={30} />
-        <FaTwitter size={30} />
-        <FaInstagram size={30} />
+        <FaYoutube size={30} />
+        <FaWikipediaW size={30} />
       </div>
     </div>
   );

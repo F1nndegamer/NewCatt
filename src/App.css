@@ -17,8 +17,8 @@
   --text-3: #ece5d4; /* legacy warm text used in some sections */
 
   /* Accent colors (one primary accent + a darker variant) */
-  --accent: #7aa47a;
-  --accent-dark: #5f7d60;
+  --accent: #9f7aa4;
+  --accent-dark: #ea00ff;
   --accent-2: var(--accent-dark);
   --accent-cta: var(--accent);
   --link-hover: var(--accent);
@@ -34,6 +34,8 @@
 
   /* Music button color (referencing surface shades) */
   --music-button: var(--surface-2);
+  --wishlist-deact: #242428;
+  --wishlist-act: #58585e;
 
   /* Page background gradients */
   --bg-grad1: #f6f5f1;
@@ -49,6 +51,7 @@
 }
 body,
 html {
+  scroll-behavior: smooth;
   text-align: center;
   overflow-x: hidden;
   margin: 0;
