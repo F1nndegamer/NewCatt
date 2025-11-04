@@ -5,7 +5,7 @@ export const timelineData = [
   { year: "07/02/2025", text: "Started Development of Tribes" },
   { year: "09/06/2025", text: "Tribes Demo Release" },
   { year: "18/09/2025", text: "Expanded the team" },
-  { year: "??/12/2025", text: "Tribes Demo 2 Release" },
+  { year: "25/11/2025", text: "Tribes Demo 2 Release" },
   { year: "1st ½ of 2026", text: "Tribes Release" },
 ];
 export const games = [

@@ -31,11 +31,32 @@ export default function SkyScroll() {
 
       if (skyRef.current)
         skyRef.current.style.background = `rgb(${r}, ${g}, ${b})`;
-
       layers.current.cloud.style.transform = `translateY(${scrollTop * 0.5}px)`;
       layers.current.mountain.style.transform = `translateY(${
         scrollTop * 0.2
       }px)`;
+      const minBrightness = 0.6;
+      const mountainBrightness = (
+        minBrightness +
+        (1 - minBrightness) * progress
+      ).toFixed(3);
+      if (layers.current.mountain) {
+        layers.current.mountain.style.setProperty(
+          "--mountain-brightness",
+          mountainBrightness
+        );
+      }
+      if (layers.current.ground) {
+        const groundDelta = 0.6;
+        const groundBrightness = Math.min(
+          parseFloat(mountainBrightness) + groundDelta,
+          1
+        ).toFixed(3);
+        layers.current.ground.style.setProperty(
+          "--ground-brightness",
+          groundBrightness
+        );
+      }
       ticking = false;
     };
 
