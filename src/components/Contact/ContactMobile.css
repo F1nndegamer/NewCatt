@@ -1,9 +1,6 @@
-.mobile-container {
-  /* mobile-only scope */
-
-  .contact-container {
-    max-width: 900px;
-    margin: 0 auto;
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
   padding: 80px 20px; /* increased vertical space */
   text-align: center;
   position: relative; /* allow full-width background pseudo-element */
@@ -162,6 +159,5 @@
 
   .contact-card.active {
     transform: scale(1);
-  }
   }
 }

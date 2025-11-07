@@ -1,26 +1,21 @@
-.desktop-container {
-  /* desktop-only scope */
+.music-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--music-button);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  user-select: none;
+  transition: transform 0.2s;
+}
 
-  .music-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: var(--music-button);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    font-size: 24px;
-    user-select: none;
-    transition: transform 0.2s;
-  }
-
-  .music-button:hover {
-    transform: scale(1.1);
-  }
-
+.music-button:hover {
+  transform: scale(1.1);
 }
