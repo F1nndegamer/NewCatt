@@ -22,7 +22,7 @@ export default function Header() {
   return (
     <header className={`header ${active ? "header-active" : ""}`}>
       <div className="header-left">
-        <a href="/">
+        <a href="#">
           <h1>Catastrophe Studios</h1>
         </a>
       </div>

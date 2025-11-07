@@ -1,5 +1,5 @@
-.desktop-container {
-  /* desktop-only scope */
+.mobile-container {
+  /* mobile-only scope */
 
   .profiles-container {
     width: 100%;

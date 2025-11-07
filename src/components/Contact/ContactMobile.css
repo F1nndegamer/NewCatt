@@ -132,8 +132,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--join);
-  color: var(--text);
+  background: var(--debug);
+  color: var(--debug);
   text-decoration: none;
   padding: 12px 24px;
   border-radius: 14px;

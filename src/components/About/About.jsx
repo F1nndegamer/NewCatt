@@ -1,12 +1,41 @@
-import React from "react";
-import {timelineData, games } from "../../data/AboutData";
+import React, { useEffect, useState } from "react";
+import { timelineData, games } from "../../data/AboutData";
 import { profiles } from "../../data/ProjectData";
 import "./About.css";
+import "./AboutMobile.css";
 import teamlogo from "../../assets/images/Profile/logo.png";
+import teamgif from "../../assets/images/Profile/teamgif.gif";
 
-export default function About() {
+function TeamGif() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const handleClick = () => {
+    setIsPlaying(true);
+    setTimeout(() => setIsPlaying(false), 6000);
+  };
+
   return (
-    <div className="container-background about-page">
+    <div
+      className="team-logo"
+      onClick={handleClick}
+      style={{ cursor: "pointer" }}
+    >
+      <img
+        src={isPlaying ? teamgif : teamlogo}
+        alt="Team Logo"
+        className="team-logo-image"
+      />
+    </div>
+  );
+}
+export default function About() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 700);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return (
+    <div className={isMobile ? "mobile-container" : "desktop-container"}>
       <section className="about-intro" id="about">
         <h1>About Us</h1>
         <p>
@@ -73,8 +102,9 @@ export default function About() {
       <section className="team-section">
         <div className="profiles-container">
           <div className="team-logo">
-            <img src={teamlogo} alt="Team Logo" className="team-logo-image" />
+            <TeamGif />
           </div>
+
           <div className="team-header">
             <h2>Meet our team</h2>
           </div>

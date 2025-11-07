@@ -6,7 +6,6 @@ import {
   FaInstagram,
   FaPatreon,
 } from "react-icons/fa";
-import { FaWikipediaW } from "react-icons/fa";
 import "./Footer.css";
 
 export default function Footer() {

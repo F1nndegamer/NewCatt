@@ -24,7 +24,7 @@
   --surface: #121217; /* main card/background dark */
   --surface-2: #242428; /* slightly lighter */
   --surface-3: #3e3746; /* used as a mid background (kept value used previously) */
-  --surface-4: #2e2a2f; /* small variant kept for compatibility */
+  --surface-4: #28242f; /* small variant kept for compatibility */
   --surface-5: rgba(255, 255, 255, 0.03);
 
   --border: #232323;

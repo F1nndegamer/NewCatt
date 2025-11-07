@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { FaFacebook, FaTwitter, FaInstagram, FaTiktok, FaWikipediaW, FaDiscord, FaPatreon, FaYoutube } from "react-icons/fa";
+import {FaWikipediaW, FaYoutube } from "react-icons/fa";
 import "./Tribes.css";
 import logo from "../../assets/icons/games/tribes.png";
-import { BsTiktok } from "react-icons/bs";
 
 export default function Tribes() {
   const [images, setImages] = useState([]);
