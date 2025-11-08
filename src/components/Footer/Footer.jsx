@@ -10,7 +10,7 @@ import "./Footer.css";
 import "./FooterMobile.css";
 
 export default function Footer() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
+  const [setIsMobile] = useState(window.innerWidth <= 700);
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 700);
     window.addEventListener("resize", handleResize);
