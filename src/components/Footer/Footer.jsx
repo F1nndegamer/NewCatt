@@ -16,10 +16,10 @@ export default function Footer() {
     const handleResize = () => setIsMobile(window.innerWidth <= 700);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [setIsMobile]); // or just [] safely
+  }, []);
 
   return (
-    <footer className="footer px-8 py-12">
+    <footer className={`footer px-8 py-12 ${isMobile ? "footer-mobile" : ""}`}>
       <p className="text-center italic mb-6">"Quote here"</p>
       <div className="socials">
         <a href="...">
