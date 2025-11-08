@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaWikipediaW, FaYoutube } from "react-icons/fa";
 import "./Tribes.css";
+import "./TribesMobile.css";
 import logo from "../../assets/icons/games/tribes.png";
 
 export default function Tribes() {

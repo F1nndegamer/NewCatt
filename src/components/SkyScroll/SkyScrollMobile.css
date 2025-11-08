@@ -1,0 +1,25 @@
+@media (max-width:700px) {
+	/* Simplified SkyScroll for mobile: reduced height and stronger parallax feel */
+	.skyscroll {
+		height: 360px;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.skyscroll .clouds { opacity: 0.9; transform: translateY(-6px); }
+
+	.skyscroll .mountain {
+		transform: translateY(6px) scale(1.06);
+		filter: brightness(var(--mountain-brightness));
+		transition: filter 120ms linear, transform 240ms ease;
+		will-change: transform, filter;
+	}
+
+	.skyscroll .ground {
+		transform: translateY(10px) scale(1.02);
+		filter: brightness(var(--ground-brightness));
+	}
+
+	/* keep layers non-interactive so content overlays work */
+	.skyscroll > * { pointer-events: none; }
+}

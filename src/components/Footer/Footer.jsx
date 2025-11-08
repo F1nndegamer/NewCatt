@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaYoutube,
   FaDiscord,
@@ -7,8 +7,15 @@ import {
   FaPatreon,
 } from "react-icons/fa";
 import "./Footer.css";
+import "./FooterMobile.css";
 
 export default function Footer() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 700);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <footer className="footer px-8 py-12">
       <p className="text-center italic mb-6">"Quote here"</p>

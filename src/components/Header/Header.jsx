@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
+import "./HeaderMobile.css";
 import {
   FaYoutube,
   FaDiscord,

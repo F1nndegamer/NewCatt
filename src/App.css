@@ -60,7 +60,10 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
 * {
   box-sizing: inherit;
 }
+
+/* NOTE: mobile debug override removed — mobile will now use the normal theme variables.
+   If you want a temporary visual debug color again, reintroduce an @media block here
+   mapping variables to --debug, or change --debug's value. */

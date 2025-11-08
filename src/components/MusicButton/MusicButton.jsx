@@ -1,5 +1,6 @@
-import { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./MusicButton.css";
+import "./MusicButtonMobile.css";
 import musicFile from "../../assets/Music/The Hunting Begins.wav";
 
 export default function MusicButton() {
