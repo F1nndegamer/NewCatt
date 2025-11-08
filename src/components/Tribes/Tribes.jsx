@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {FaWikipediaW, FaYoutube } from "react-icons/fa";
+import { FaWikipediaW, FaYoutube } from "react-icons/fa";
 import "./Tribes.css";
 import logo from "../../assets/icons/games/tribes.png";
 
@@ -69,27 +69,30 @@ export default function Tribes() {
         <div className="history">
           <h2>History of Tribes</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-            libero lorem, finibus a aliquet vitae, pulvinar in mi. Vestibulum
-            semper non sapien aliquet commodo. Aenean dapibus finibus turpis, ac
-            congue lorem ornare et. Ut hendrerit ante elit, nec tempus lorem
-            rhoncus tincidunt. Fusce tincidunt orci elit, dignissim hendrerit
-            justo cursus vitae. Duis efficitur vehicula urna. Nunc sodales,
-            velit eu gravida pulvinar, felis arcu interdum metus, at vehicula
-            urna augue at lacus. Sed vel nulla ipsum. Sed consequat consectetur
-            ante, tempor malesuada lacus malesuada in. Vestibulum vel nisi non
-            purus placerat porta. Pellentesque habitant morbi tristique senectus
-            et netus et malesuada fames ac turpis egestas.
+            Tribes started on the 7th of February, 2025. The original name of
+            Tribes was Crown in Carnage and was supposed to be a small strategy
+            game and our first official Steam release. We started with a team of
+            2 people otherwise known as the CEO’s of Catastrophe Studios named
+            Arxar(Arda) and Chezzerz(Dillon). Development started amazingly and
+            progress was amazing at the start. We got really good feedback from
+            our followers and friends and it was an amazing feeling. Eventually
+            once the idea of Tribes started becoming bigger we decided to hire
+            more people into Tribes and we got a programmer called Alex and a
+            musician called Patrick on our team. The team was good and it went
+            amazing and we got to a point of releasing our Steam Demo.
             <br /> <br />
-            Morbi ac ante sed nulla efficitur lacinia. Sed eu tempus nisl.
-            Mauris eleifend nisl lectus. Vestibulum aliquet ante at est
-            ultricies molestie. Integer vel accumsan urna. Donec eget ornare
-            metus, at dignissim turpis. In hac habitasse platea dictumst.
-            Pellentesque tempor rutrum arcu vitae pharetra. Aliquam aliquam
-            magna vel nunc fermentum sodales. Suspendisse pharetra magna ac erat
-            ultricies accumsan. Sed feugiat mollis odio quis fringilla. Vivamus
-            ut mi id sem porttitor dictum. Suspendisse in eleifend dolor, sed
-            sagittis massa. Nulla facilisi.
+            This might have been one of the best feelings when making this game.
+            The feedback. The gameplay. Tips and people telling us they see so
+            much potential in our game and love it. We even got donations which
+            motivated us to work way harder. Eventually Patrick had to drop out
+            of our team for personal issues so we decided to expand the team
+            once more considering the bigger scope of Tribes and potential the
+            game has. <br /> We took on an artist called Ava, 2 programmers
+            called Orange and F1nn, and a musician called Joel. Right now we are
+            incredibly hard at work at pushing out our second and last demo this
+            year. We are hoping that with this team and dedication that soon we
+            will release a full version of Tribes somewhere in the first half of
+            2026. Thank you all for your support.
           </p>
         </div>
         <div className="future-goals">
