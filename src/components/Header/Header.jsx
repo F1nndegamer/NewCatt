@@ -13,7 +13,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-    setActive(window.scrollY > 1100); 
+      setActive(window.scrollY > 1100);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -22,7 +22,8 @@ export default function Header() {
   return (
     <header className={`header ${active ? "header-active" : ""}`}>
       <div className="header-left">
-        <a href="#">
+        {/* link to top/home; use a real href for accessibility */}
+        <a href="/" aria-label="Home">
           <h1>Catastrophe Studios</h1>
         </a>
       </div>
@@ -34,19 +35,39 @@ export default function Header() {
       </nav>
 
       <div className="social-links">
-        <a href="https://www.youtube.com/@CatastropheStudiosAC" target="_blank">
+        <a
+          href="https://www.youtube.com/@CatastropheStudiosAC"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <FaYoutube />
         </a>
-        <a href="https://www.discord.gg/twbPKAHRNy" target="_blank">
+        <a
+          href="https://www.discord.gg/twbPKAHRNy"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <FaDiscord />
         </a>
-        <a href="https://www.tiktok.com/@tribesgame" target="_blank">
+        <a
+          href="https://www.tiktok.com/@tribesgame"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <FaTiktok />
         </a>
-        <a href="https://www.instagram.com/tribesgame/" target="_blank">
+        <a
+          href="https://www.instagram.com/tribesgame/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <FaInstagram />
         </a>
-        <a href="https://www.patreon.com/CatastropheStudiosDEV" target="_blank">
+        <a
+          href="https://www.patreon.com/CatastropheStudiosDEV"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <FaPatreon />
         </a>
       </div>
