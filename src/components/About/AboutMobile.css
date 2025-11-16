@@ -1,5 +1,4 @@
 @media (max-width: 700px) {
-  /* Mobile-first creative About page */
   .profiles-container {
     width: 100%;
     padding: 22px 18px;
@@ -9,7 +8,6 @@
     box-sizing: border-box;
   }
 
-  /* soft header band with subtle gradient */
   .profiles-container::before {
     content: "";
     position: absolute;
@@ -59,7 +57,6 @@
     font-size: 0.98rem;
   }
 
-  /* stacked profile cards with gentle glass look */
   .profile-card {
     display: flex;
     flex-direction: row;
@@ -103,7 +100,6 @@
     margin-top: 6px;
   }
 
-  /* timeline simplified for mobile */
   .timeline {
     height: 6px;
     border-radius: 12px;
@@ -118,7 +114,6 @@
     color: var(--text);
   }
 
-  /* games become horizontally scrollable cards */
   .games-grid {
     display: flex;
     gap: 12px;
@@ -139,7 +134,6 @@
     display: block;
   }
 
-  /* small tweaks */
   .games-section {
     padding-top: 6px;
   }

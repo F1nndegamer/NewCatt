@@ -1,5 +1,4 @@
 @media (max-width: 700px) {
-  /* Minimal sticky header for mobile */
   .header {
     display: flex;
     justify-content: space-between;
@@ -27,7 +26,6 @@
     margin: 0;
   }
 
-  /* compact hamburger area (JS can toggle .nav-open on body to show nav) */
   .hamburger {
     width: 44px;
     height: 44px;
@@ -39,7 +37,6 @@
     border: 1px solid var(--border);
   }
 
-  /* hide default nav-links on very small screens; rely on a collapsible menu */
   .nav-links {
     display: none;
   }

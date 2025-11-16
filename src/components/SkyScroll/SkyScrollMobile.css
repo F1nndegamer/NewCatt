@@ -1,5 +1,4 @@
 @media (max-width:700px) {
-	/* Simplified SkyScroll for mobile: reduced height and stronger parallax feel */
 	.skyscroll {
 		height: 360px;
 		overflow: hidden;
@@ -20,6 +19,5 @@
 		filter: brightness(var(--ground-brightness));
 	}
 
-	/* keep layers non-interactive so content overlays work */
 	.skyscroll > * { pointer-events: none; }
 }

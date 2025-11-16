@@ -1,11 +1,11 @@
 .desktop-container .contact-container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 80px 20px; /* increased vertical space */
+  padding: 80px 20px;
   text-align: center;
-  position: relative; /* allow full-width background pseudo-element */
+  position: relative;
   z-index: 1;
-  background: transparent; /* visual background is provided by ::before */
+  background: transparent;
 }
 
 .desktop-container .contact-container::before {
@@ -15,7 +15,7 @@
   transform: translateX(-50%);
   top: -50px;
   bottom: 0;
-  width: 100vw; /* span full viewport width */
+  width: 100vw;
   background: #3e3746;
   z-index: -1;
 }

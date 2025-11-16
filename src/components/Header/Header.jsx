@@ -23,7 +23,6 @@ export default function Header() {
   return (
     <header className={`header ${active ? "header-active" : ""}`}>
       <div className="header-left">
-        {/* link to top/home; use a real href for accessibility */}
         <a href="/" aria-label="Home">
           <h1>Catastrophe Studios</h1>
         </a>
