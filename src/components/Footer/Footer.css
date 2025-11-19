@@ -8,19 +8,30 @@
 .desktop-container .footer .socials {
   color: var(--text);
   display: flex;
+  margin-left: 10px;
+  padding: 8px;
   gap: 8px;
 }
 
 .desktop-container .footer .socials a {
   color: var(--text);
+  padding: 8px;
+  margin-left: 10px;
   font-size: 1.2rem;
 }
 
 .desktop-container .footer .socials a:hover {
+  padding: 8px;
+  margin-left: 10px;
   color: var(--text-2);
 }
 
 .desktop-container .footer p {
   color: var(--text-accent);
   margin-top: 8px;
+  margin-left: 10px;
+  padding: 8px;
+}
+.socials a{
+  margin: 2px;
 }

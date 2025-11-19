@@ -26,7 +26,7 @@ export const profiles = [
     job: "Programmer",
     image: ProfilePic3,
     description:
-      "F1nn is one of our programmers, located in The Netherlands and has 7 years of experience in the game development field, he primarily focuses on optimization and gameplay mechanics.",
+      "F1nn is one of our programmers, located in The Netherlands and has 7 years of experience in the game development field, he primarily focuses on optimization and gameplay mechanics. He also made this website",
   },
   {
     name: "Arda",

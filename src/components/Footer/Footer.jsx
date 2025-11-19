@@ -7,7 +7,6 @@ import {
   FaPatreon,
 } from "react-icons/fa";
 import "./Footer.css";
-import "./FooterMobile.css";
 
 export default function Footer() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
@@ -20,7 +19,7 @@ export default function Footer() {
 
   return (
     <footer className={`footer px-8 py-12 ${isMobile ? "footer-mobile" : ""}`}>
-      <p className="text-center italic mb-6">"Quote here"</p>
+      <p className="text-center italic mb-6">"Making games both fun and with chaos!"</p>
       <div className="socials">
         <a href="...">
           <FaYoutube />
@@ -38,7 +37,7 @@ export default function Footer() {
           <FaPatreon />
         </a>
       </div>
-      <p className="text-center text-sm mt-6">©Catastrophe Studios</p>
+      <p className="text-center text-sm mt-6">©Catastrophe Studios 2025- F1nn</p>
     </footer>
   );
 }

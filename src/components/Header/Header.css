@@ -10,12 +10,25 @@
   width: 100%;
   z-index: 1000;
 }
+
 .header-active {
   background-color: var(--overlay);
   --text: var(--text-2);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
+.Hamburger
+{
+    visibility: hidden;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
+  pointer-events: none;
+}
 .header-left {
   display: flex;
   align-items: center;
